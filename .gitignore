@@ -78,3 +78,4 @@ config.status
 src/.deps/
 src/Makefile
 
+src/swmctrl
