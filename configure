@@ -622,8 +622,8 @@ ac_subst_vars='am__EXEEXT_FALSE
 am__EXEEXT_TRUE
 LTLIBOBJS
 LIBOBJS
-SXCTRL_LIBS
-SXCTRL_CFLAGS
+X11LIB_LIBS
+X11LIB_CFLAGS
 PKG_CONFIG_LIBDIR
 PKG_CONFIG_PATH
 PKG_CONFIG
@@ -752,8 +752,8 @@ CPP
 PKG_CONFIG
 PKG_CONFIG_PATH
 PKG_CONFIG_LIBDIR
-SXCTRL_CFLAGS
-SXCTRL_LIBS'
+X11LIB_CFLAGS
+X11LIB_LIBS'
 
 
 # Initialize some variables set by options.
@@ -1407,9 +1407,9 @@ Some influential environment variables:
               directories to add to pkg-config's search path
   PKG_CONFIG_LIBDIR
               path overriding pkg-config's built-in search path
-  SXCTRL_CFLAGS
-              C compiler flags for SXCTRL, overriding pkg-config
-  SXCTRL_LIBS linker flags for SXCTRL, overriding pkg-config
+  X11LIB_CFLAGS
+              C compiler flags for X11LIB, overriding pkg-config
+  X11LIB_LIBS linker flags for X11LIB, overriding pkg-config
 
 Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
@@ -4789,11 +4789,11 @@ $as_echo "no" >&6; }
 fi
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for SXCTRL" >&5
-$as_echo_n "checking for SXCTRL... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for X11LIB" >&5
+$as_echo_n "checking for X11LIB... " >&6; }
 
-if test -n "$SXCTRL_CFLAGS"; then
-    pkg_cv_SXCTRL_CFLAGS="$SXCTRL_CFLAGS"
+if test -n "$X11LIB_CFLAGS"; then
+    pkg_cv_X11LIB_CFLAGS="$X11LIB_CFLAGS"
  elif test -n "$PKG_CONFIG"; then
     if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
@@ -4805,7 +4805,7 @@ if test -n "$SXCTRL_CFLAGS"; then
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
-  pkg_cv_SXCTRL_CFLAGS=`$PKG_CONFIG --cflags "
+  pkg_cv_X11LIB_CFLAGS=`$PKG_CONFIG --cflags "
 	x11 >= 1.6.4
 " 2>/dev/null`
 		      test "x$?" != "x0" && pkg_failed=yes
@@ -4815,8 +4815,8 @@ fi
  else
     pkg_failed=untried
 fi
-if test -n "$SXCTRL_LIBS"; then
-    pkg_cv_SXCTRL_LIBS="$SXCTRL_LIBS"
+if test -n "$X11LIB_LIBS"; then
+    pkg_cv_X11LIB_LIBS="$X11LIB_LIBS"
  elif test -n "$PKG_CONFIG"; then
     if test -n "$PKG_CONFIG" && \
     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
@@ -4828,7 +4828,7 @@ if test -n "$SXCTRL_LIBS"; then
   ac_status=$?
   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
   test $ac_status = 0; }; then
-  pkg_cv_SXCTRL_LIBS=`$PKG_CONFIG --libs "
+  pkg_cv_X11LIB_LIBS=`$PKG_CONFIG --libs "
 	x11 >= 1.6.4
 " 2>/dev/null`
 		      test "x$?" != "x0" && pkg_failed=yes
@@ -4851,28 +4851,28 @@ else
         _pkg_short_errors_supported=no
 fi
         if test $_pkg_short_errors_supported = yes; then
-	        SXCTRL_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "
+	        X11LIB_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "
 	x11 >= 1.6.4
 " 2>&1`
         else
-	        SXCTRL_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "
+	        X11LIB_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "
 	x11 >= 1.6.4
 " 2>&1`
         fi
 	# Put the nasty error message in config.log where it belongs
-	echo "$SXCTRL_PKG_ERRORS" >&5
+	echo "$X11LIB_PKG_ERRORS" >&5
 
 	as_fn_error $? "Package requirements (
 	x11 >= 1.6.4
 ) were not met:
 
-$SXCTRL_PKG_ERRORS
+$X11LIB_PKG_ERRORS
 
 Consider adjusting the PKG_CONFIG_PATH environment variable if you
 installed software in a non-standard prefix.
 
-Alternatively, you may set the environment variables SXCTRL_CFLAGS
-and SXCTRL_LIBS to avoid the need to call pkg-config.
+Alternatively, you may set the environment variables X11LIB_CFLAGS
+and X11LIB_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
      	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
@@ -4883,15 +4883,15 @@ as_fn_error $? "The pkg-config script could not be found or is too old.  Make su
 is in your PATH or set the PKG_CONFIG environment variable to the full
 path to pkg-config.
 
-Alternatively, you may set the environment variables SXCTRL_CFLAGS
-and SXCTRL_LIBS to avoid the need to call pkg-config.
+Alternatively, you may set the environment variables X11LIB_CFLAGS
+and X11LIB_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details.
 
 To get pkg-config, see <http://pkg-config.freedesktop.org/>.
 See \`config.log' for more details" "$LINENO" 5; }
 else
-	SXCTRL_CFLAGS=$pkg_cv_SXCTRL_CFLAGS
-	SXCTRL_LIBS=$pkg_cv_SXCTRL_LIBS
+	X11LIB_CFLAGS=$pkg_cv_X11LIB_CFLAGS
+	X11LIB_LIBS=$pkg_cv_X11LIB_LIBS
         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
 $as_echo "yes" >&6; }
 

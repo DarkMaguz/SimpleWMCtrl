@@ -218,9 +218,9 @@ PKG_CONFIG_PATH = @PKG_CONFIG_PATH@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-SXCTRL_CFLAGS = @SXCTRL_CFLAGS@
-SXCTRL_LIBS = @SXCTRL_LIBS@
 VERSION = @VERSION@
+X11LIB_CFLAGS = @X11LIB_CFLAGS@
+X11LIB_LIBS = @X11LIB_LIBS@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -278,8 +278,8 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 swmctrl_SOURCES = SimpleWMCtrl.cpp WindowProperty.cpp WMXCtrl.cpp WindowData.cpp
-swmctrl_CPPFLAGS = $(SXCTRL_CFLAGS)
-swmctrl_LDADD = $(SXCTRL_LIBS)
+swmctrl_CPPFLAGS = $(X11LIB_CFLAGS)
+swmctrl_LDADD = $(X11LIB_LIBS)
 all: all-am
 
 .SUFFIXES:

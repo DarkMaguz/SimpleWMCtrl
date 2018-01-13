@@ -14,7 +14,7 @@ dnl ###########################################################################
 
 AC_CHECK_HEADER([json.hpp])
 
-PKG_CHECK_MODULES([SXCTRL], [
+PKG_CHECK_MODULES([X11LIB], [
 	x11 >= 1.6.4
 ])
 
